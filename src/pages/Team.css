@@ -1,0 +1,137 @@
+.team-container {
+  animation: fadeIn 0.5s ease-in;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.team-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.team-member {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-member.blue {
+  border-top: 4px solid var(--light-blue);
+  background: linear-gradient(180deg, rgba(0, 119, 182, 0.05) 0%, white 100%);
+}
+
+.team-member.orange {
+  border-top: 4px solid var(--secondary-orange);
+  background: linear-gradient(180deg, rgba(247, 127, 0, 0.05) 0%, white 100%);
+}
+
+.team-member.teal {
+  border-top: 4px solid var(--accent-teal);
+  background: linear-gradient(180deg, rgba(6, 174, 213, 0.05) 0%, white 100%);
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
+}
+
+.member-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  margin: 0.5rem 0;
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+}
+
+.role {
+  color: var(--light-blue);
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.05rem;
+}
+
+.description {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.values-section {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.values-section h2 {
+  margin-bottom: 2rem;
+  color: var(--primary-blue);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-item h4 {
+  margin: 0.5rem 0;
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+.value-item p {
+  margin: 0;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-section {
+    padding: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

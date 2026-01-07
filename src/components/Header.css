@@ -1,24 +1,75 @@
 .nav {
-  background: #003049;
+  background: white;
   padding: 1rem 2rem;
-  color: white;
+  color: var(--primary-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav a {
-  color: white;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  text-decoration: underline;
+  border-bottom: 3px solid var(--light-blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo::before {
+  content: '🔒';
+  font-size: 1.3rem;
+}
+
+.nav a {
+  color: var(--text-dark);
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--secondary-orange);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--light-blue);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav nav {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .nav a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
