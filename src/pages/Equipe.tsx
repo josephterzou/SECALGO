@@ -6,19 +6,19 @@ const team = [
     name: "Eliott Perrignon",
     role: "Expert Architecture SI",
     bio: "Spécialiste en architecture des systèmes d'information, Eliott conçoit et optimise les infrastructures sécurisées pour garantir la résilience de vos systèmes face aux menaces.",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/elliot-perrignon-95a24727b/"
   },
   {
     name: "Nicolas Priscal",
     role: "Chef de Projet",
     bio: "Nicolas pilote l'ensemble de nos projets avec rigueur et méthode. Il assure la coordination entre les équipes et la satisfaction de nos clients tout au long de leur parcours de sécurisation.",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/nprscl/"
   },
   {
     name: "Joseph Terzibachian",
     role: "Communication & Formation",
     bio: "Expert en communication et formation, Joseph rend la cybersécurité accessible à tous. Il conçoit et anime nos sessions de sensibilisation pour transformer vos collaborateurs en première ligne de défense.",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/joseph-terzibachian/"
   }
 ];
 
@@ -54,19 +54,19 @@ export default function Equipe() {
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-foreground mb-2">
                   {member.name}
                 </h3>
-                
+
                 <p className="text-accent font-semibold mb-4">
                   {member.role}
                 </p>
-                
+
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {member.bio}
                 </p>
-                
+
                 <a
                   href={member.linkedin}
                   target="_blank"
@@ -98,7 +98,7 @@ export default function Equipe() {
                   Nous rendons la cybersécurité compréhensible et accessible à toutes les entreprises, quelle que soit leur taille ou leur expertise technique.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   Souveraineté
@@ -107,7 +107,7 @@ export default function Equipe() {
                   Nous privilégions des solutions françaises et européennes pour garantir la maîtrise et la protection de vos données sensibles.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   Expertise
