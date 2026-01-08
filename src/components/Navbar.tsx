@@ -16,7 +16,7 @@ export function Navbar() {
 
   // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
