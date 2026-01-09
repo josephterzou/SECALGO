@@ -109,6 +109,7 @@ export default {
         "scale-in": "scale-in 0.4s ease-out forwards",
         "float": "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "page-enter": "fade-in 0.5s ease-out forwards",
       },
     },
   },

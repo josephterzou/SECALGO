@@ -1,0 +1,100 @@
+================================================================================
+RÉSUMÉ DU PROJET SECALGO
+================================================================================
+
+1. INFORMATIONS GÉNÉRALES
+--------------------------------------------------------------------------------
+Nom du projet : Secalgo (Site Vitrine)
+Type : Single Page Application (SPA)
+Framework Principal : React 18 + TypeScript
+Build Tool : Vite
+Style & UI : Tailwind CSS + Radix UI (base de Shadcn UI)
+Routing : React Router DOM 6
+
+2. ARCHITECTURE TECHNIQUE
+--------------------------------------------------------------------------------
+L'architecture suit une organisation standard React/Vite modulaire :
+
+/src
+  /assets         # Fichiers statiques (images, etc.)
+  /components     # Composants React réutilisables
+    /layout       # Composants de structure (Navbar, Footer, Layout)
+    /ui           # Composants d'interface atomiques (Shadcn UI : button, card, etc.)
+  /hooks          # Hooks personnalisés (ex: use-toast.ts)
+  /lib            # Utilitaires (ex: utils.ts pour la gestion des classes CSS)
+  /pages          # Les vues principales de l'application (pages routed)
+  App.tsx         # Point d'entrée des routes et providers
+  main.tsx        # Point d'entrée du rendu React (DOM)
+  index.css       # Styles globaux et configuration Tailwind
+
+3. STACK TECHNIQUE DÉTAILLÉE
+--------------------------------------------------------------------------------
+- Langage : TypeScript (TSX pour les composants React)
+- Styles : 
+  - Tailwind CSS pour le styling utilitaire.
+  - CSS Modules / Variables CSS pour les thèmes (voir index.css).
+  - `class-variance-authority` (cva) pour la gestion des variantes de composants.
+- UI Kit : Shadcn UI (basé sur Radix UI primitives headless).
+- Icônes : Lucide React.
+- State Management : React Context (interne) + TanStack Query (configuré dans App.tsx).
+- Routing : React Router (`BrowserRouter`, `Routes`, `Route`).
+- Bundler : Vite (rapide, HMR).
+
+4. STRUCTURE DES PAGES (ROUTING)
+--------------------------------------------------------------------------------
+Routing défini dans `src/App.tsx`. Toutes les pages sont enveloppées dans le composant `Layout`.
+
+A. Page d'Accueil ("/")
+   - Fichier : src/pages/Index.tsx
+   - Contenu : 
+     - Hero section avec gradient animé.
+     - Section "Mission".
+     - Section "Pourquoi choisir Secalgo ?" (Grid de features).
+     - Section "Stats".
+     - CTA (Call to Action) final.
+   - Langage : TypeScript/React
+
+B. Page Services ("/services")
+   - Fichier : src/pages/Services.tsx
+   - Contenu : Liste détaillée des offres (Audit, Conformité, Formation, etc.).
+   - Langage : TypeScript/React
+
+C. Page Équipe ("/equipe")
+   - Fichier : src/pages/Equipe.tsx
+   - Contenu : Présentation des membres et de la culture d'entreprise.
+   - Langage : TypeScript/React
+
+D. Page Contact ("/contact")
+   - Fichier : src/pages/Contact.tsx
+   - Contenu : 
+     - Informations de contact (Email, LinkedIn).
+     - Formulaire ou liens d'action directs.
+     - FAQ.
+   - Langage : TypeScript/React
+
+E. Page 404 ("*")
+   - Fichier : src/pages/NotFound.tsx
+   - Contenu : Message d'erreur et lien de retour.
+   - Langage : TypeScript/React
+
+5. COMPOSANTS CLÉS
+--------------------------------------------------------------------------------
+- Layout (src/components/layout/Layout.tsx) : 
+  - Wrapper global qui contient la `Navbar` (haut), le `children` (contenu de la page), et le `Footer` (bas).
+  - Assure la cohérence structurelle sur toutes les pages.
+
+- Navbar (src/components/Navbar.tsx) :
+  - Navigation responsive (Menu burger sur mobile).
+  - Gestion du scroll (fixe en haut).
+  - Gère le "Scroll to Top" instantané lors de la navigation.
+
+- Footer (src/components/layout/Footer.tsx) :
+  - Liens de navigation secondaire.
+  - Informations légales et copyright.
+
+6. OBSERVATIONS SUR LE CODE
+--------------------------------------------------------------------------------
+- Utilisation intensive de composants fonctionnels et de Hooks (`useEffect`, `useState`).
+- Code propre et typé (TypeScript interfaces).
+- Animations gérées via Tailwind (`animate-fade-in`) et CSS inline pour les délais.
+- Les dépendances sont modernes et maintenues (React 18, Vite 5).

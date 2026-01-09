@@ -44,21 +44,21 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="container mx-auto px-4 py-20 md:py-32 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent mb-6">
               <Shield className="w-4 h-4" />
               <span className="text-sm font-medium">Cybersécurité française</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Protégez votre entreprise avec{" "}
               <span className="text-accent">confiance</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed">
               Secalgo accompagne les PME et ETI françaises dans la sécurisation de leurs systèmes d'information. Une approche humaine, accessible et 100% souveraine.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact">
                   Nous contacter
@@ -108,8 +108,7 @@ export default function Index() {
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-xl gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-7 h-7 text-accent-foreground" />
@@ -133,8 +132,7 @@ export default function Index() {
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="text-center p-6 animate-fade-in"
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                className="text-center p-6"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-accent" />
